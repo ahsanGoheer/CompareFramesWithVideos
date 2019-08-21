@@ -5,7 +5,6 @@ import os
 import csv
 from skimage.measure import compare_nrmse
 from tqdm import tqdm
-from decimal import *
 import time
 
 video_path = sys.argv[1]
@@ -19,7 +18,6 @@ writer = csv.DictWriter(csv_file,fieldnames=fieldNames,dialect='excel')
 writer.writeheader()
 pbar  = tqdm(total=len(image_file))
 checked_frames=[]
-start = time.
 for image in image_file:
     frame_num = 0
     cap = cv2.VideoCapture(video_path)
